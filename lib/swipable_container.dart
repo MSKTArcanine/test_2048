@@ -33,14 +33,18 @@ class _SwipableContainerState extends State<SwipableContainer> {
         final dy = d.dy;
         if (dx.abs() > dy.abs()) {
           if (dx > 0) {
+            print('DROITE');
             widget.onSwipe(SwipeDirections.right);
           } else {
             widget.onSwipe(SwipeDirections.left);
+            print('GAUCHE');
           }
         } else {
           if (dy > 0) {
+            print("DOWN");
             widget.onSwipe(SwipeDirections.down);
           } else {
+            print("UP");
             widget.onSwipe(SwipeDirections.up);
           }
         }

@@ -49,14 +49,14 @@ class Board {
 
   void swipeLeft() {
     for (List<int> row in _board) {
-      Utils().swipeLeft(row);
+      Utils().fullSwipeLeft(row);
     }
   }
 
   void swipeRight() {
     for (int i = 0; i < _board.length; i++) {
       List<int> row = _board[i].reversed.toList();
-      Utils().swipeLeft(row);
+      Utils().fullSwipeLeft(row);
       _board[i] = row.reversed.toList();
     }
   }
